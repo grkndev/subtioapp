@@ -9,12 +9,12 @@ export function Hero() {
   return (
     <div className="flex min-h-[calc(100svh-4.5rem)] flex-col justify-center items-center text-center px-4">
       <div className="absolute -top-24 left-0 w-full h-full">
-        <BgIns className="w-full -z-10" />
+        <BgIns className="w-full -z-10 invert dark:invert-0" />
       </div>
 
       <div className="flex h-full flex-col items-center justify-center   ">
         <div className="flex items-center justify-center w-full gap-16">
-          <Arrow className="-rotate-65" />
+          <Arrow className="-rotate-65 invert dark:invert-0" />
           <div className="w-full flex flex-col items-center justify-center gap-8">
             <div className="w-full flex flex-col items-center justify-center gap-4">
               <h1 className="font-bold text-7xl text-center">
@@ -35,7 +35,7 @@ export function Hero() {
               way you want them.
             </h6>
           </div>
-          <Arrow className="rotate-y-180 rotate-65" />
+          <Arrow className="rotate-y-180 rotate-65 invert dark:invert-0" />
         </div>
         
       </div>
