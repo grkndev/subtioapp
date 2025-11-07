@@ -33,9 +33,11 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Eclipse, UserRound } from "lucide-react";
+import { Eclipse, Plus, UserRound } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 const data = {
   user: {
@@ -82,6 +84,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
+        <SidebarMenuItem className="px-2 mt-4">
+          <Link href={"/dashboard/new"}>
+            <Button className="w-full p-0 " variant={"default"}>
+              <Plus />
+              <span>New</span>
+            </Button>
+          </Link>
+        </SidebarMenuItem>
+
         <NavMain items={data.navMain} />
 
         <SidebarMenuItem className="mt-auto mx-2">
