@@ -6,20 +6,22 @@ import { useTheme } from "next-themes";
 
 interface ThemeToggleProps {
   className?: string;
+  shownLabel?: boolean;
 }
 
-export function ThemeToggle({ className }: ThemeToggleProps) {
+export function ThemeToggle({ className, shownLabel }: ThemeToggleProps) {
   const { theme, setTheme } = useTheme();
 
   return (
     <Button
-      size="icon"
+      // size="icon"
       variant="ghost"
       className="h-7"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <Sun className="!size-[1.1rem]" />
-      <span className="sr-only">{theme === "dark" ? "Light" : "Dark"}</span>
+      {shownLabel && <span>Toggle Theme</span>}
+      {/* <span className="sr-only">{theme === "dark" ? "Light" : "Dark"}</span> */}
     </Button>
   );
 }
